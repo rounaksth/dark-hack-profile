@@ -21,6 +21,20 @@ const Index = () => {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5))]"></div>
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
+            {/* Logo Image */}
+            <div className="mb-6 flex justify-center">
+              <div className="w-32 h-32 rounded-full border-2 border-primary overflow-hidden shadow-lg shadow-primary/30 animate-pulse">
+                <img 
+                  src="/logo-rp.png" 
+                  alt="Rounak Pradhan Logo" 
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&h=200";
+                    e.currentTarget.alt = "Default Logo";
+                  }}
+                />
+              </div>
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-glitch">
               <span className="text-primary">Rounak</span> Pradhan
             </h1>
